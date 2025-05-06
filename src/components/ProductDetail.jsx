@@ -76,20 +76,7 @@ const ProductDetail = () => {
           <Grid container spacing={{ xs: 3, md: 6 }} alignItems="flex-start">
             <Grid item xs={12} md={6}>
               <Box sx={{ position: 'relative' }}>
-                {product.discountPercentage > 0 && (
-                  <Chip 
-                    label={`${Math.round(product.discountPercentage)}% OFF`} 
-                    color="secondary" 
-                    sx={{ 
-                      position: 'absolute', 
-                      top: 16, 
-                      right: 16, 
-                      fontWeight: 'bold',
-                      fontSize: '0.9rem',
-                      py: 0.5
-                    }}
-                  />
-                )}
+
                 <Box
                   component="img"
                   src={product.thumbnail}
@@ -142,18 +129,6 @@ const ProductDetail = () => {
                       textTransform: 'capitalize'
                     }}
                   />
-                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <Rating 
-                      value={product.rating} 
-                      precision={0.1} 
-                      readOnly 
-                      size="small"
-                      emptyIcon={<Star style={{ opacity: 0.55 }} fontSize="inherit" />}
-                    />
-                    <Typography variant="body2" sx={{ ml: 1, fontWeight: 'medium' }}>
-                      ({product.rating})
-                    </Typography>
-                  </Box>
                 </Box>
                 
                 <Typography variant="h4" gutterBottom sx={{ fontWeight: 700, mt: 1 }}>

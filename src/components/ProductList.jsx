@@ -132,20 +132,7 @@ const ProductList = () => {
                 overflow: 'hidden',
                 position: 'relative'
               }}>
-                {product.discountPercentage > 0 && (
-                  <Chip 
-                    label={`${Math.round(product.discountPercentage)}% OFF`} 
-                    color="secondary" 
-                    size="small"
-                    sx={{ 
-                      position: 'absolute', 
-                      top: 10, 
-                      right: 10, 
-                      zIndex: 1,
-                      fontWeight: 'bold'
-                    }}
-                  />
-                )}
+
                 <CardMedia
                   component="img"
                   height="220"
@@ -172,12 +159,6 @@ const ProductList = () => {
                         textTransform: 'capitalize'
                       }}
                     />
-                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                      <Star sx={{ color: '#FFB400', fontSize: '1rem', mr: 0.5 }} />
-                      <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
-                        {product.rating}
-                      </Typography>
-                    </Box>
                   </Box>
                   <Typography 
                     gutterBottom 
